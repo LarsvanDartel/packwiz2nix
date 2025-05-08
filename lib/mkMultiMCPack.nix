@@ -11,7 +11,7 @@
   extraFiles ? {},
   instanceCfg,
   ...
-} @ args:
+}:
 stdenvNoCC.mkDerivation (finalAttrs:
     {
       pname = src.pname or pname;
@@ -51,5 +51,4 @@ stdenvNoCC.mkDerivation (finalAttrs:
 
           ${lib.getExe strip-nondeterminism} $out/${finalAttrs.pname}-${finalAttrs.version}.zip
         '';
-    }
-    // args)
+    })
