@@ -26,7 +26,7 @@ stdenvNoCC.mkDerivation (finalAttrs:
       installPhase = let
         modpackFiles =
           {
-            "packwiz-installer-bootstrap.jar" = packwiz-installer-bootstrap;
+            "minecraft/packwiz-installer-bootstrap.jar" = packwiz-installer-bootstrap;
             "instance.cfg" = instanceCfg;
           }
           // extraFiles;
